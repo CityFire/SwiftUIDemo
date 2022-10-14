@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PokemonInfoPanel: View {
     
+    @State var darkBlur = false
+    
     let model: PokemonViewModel
     var abilities: [AbilityViewModel] {
         AbilityViewModel.sample(pokemonID: model.id)
@@ -29,6 +31,11 @@ struct PokemonInfoPanel: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            Button(action: {
+                self.darkBlur.toggle()
+            }){
+                Text("切换模糊效果")
+            }
             topIndicator
             Header(model: model)
             pokemonDescription
@@ -45,7 +52,7 @@ struct PokemonInfoPanel: View {
                 trailing: 30
             )
         )
-        .blurBackground(style: .systemMaterial)
+        .blurBackground(style: darkBlur ? .systemMaterialDark : .systemMaterial)
         .cornerRadius(20)
         .fixedSize(horizontal: false, vertical: true)
     }

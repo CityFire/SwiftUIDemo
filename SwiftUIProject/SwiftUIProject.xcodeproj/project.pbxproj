@@ -14,6 +14,10 @@
 		0405F7B628F7344100A2F50D /* SwiftUIProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F7B528F7344100A2F50D /* SwiftUIProjectTests.swift */; };
 		0405F7C028F7344100A2F50D /* SwiftUIProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F7BF28F7344100A2F50D /* SwiftUIProjectUITests.swift */; };
 		0405F7C228F7344100A2F50D /* SwiftUIProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F7C128F7344100A2F50D /* SwiftUIProjectUITestsLaunchTests.swift */; };
+		04C007E128F97F2A002C9A1A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C007DB28F97F2A002C9A1A /* AppState.swift */; };
+		04C007E228F97F2A002C9A1A /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C007DC28F97F2A002C9A1A /* AppError.swift */; };
+		04C007E328F97F2A002C9A1A /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C007DD28F97F2A002C9A1A /* AppAction.swift */; };
+		04C007E428F97F2A002C9A1A /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C007DF28F97F2A002C9A1A /* FileStorage.swift */; };
 		04E350E128F843570087CD14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E350E028F843560087CD14 /* User.swift */; };
 		04E350E728F844790087CD14 /* FileHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E350E628F844790087CD14 /* FileHelpers.swift */; };
 		04E350E928F8454B0087CD14 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E350E828F8454B0087CD14 /* Helpers.swift */; };
@@ -126,6 +130,10 @@
 		0405F7BB28F7344100A2F50D /* SwiftUIProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0405F7BF28F7344100A2F50D /* SwiftUIProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectUITests.swift; sourceTree = "<group>"; };
 		0405F7C128F7344100A2F50D /* SwiftUIProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04C007DB28F97F2A002C9A1A /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		04C007DC28F97F2A002C9A1A /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		04C007DD28F97F2A002C9A1A /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		04C007DF28F97F2A002C9A1A /* FileStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		04E350E028F843560087CD14 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04E350E628F844790087CD14 /* FileHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpers.swift; sourceTree = "<group>"; };
 		04E350E828F8454B0087CD14 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -258,6 +266,7 @@
 		0405F7A328F7343E00A2F50D /* SwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				04C007D928F97F2A002C9A1A /* State */,
 				04E350D828F83FA50087CD14 /* Model */,
 				04E350D728F83F9D0087CD14 /* Utils */,
 				04E350D628F83F900087CD14 /* View */,
@@ -293,6 +302,41 @@
 				0405F7C128F7344100A2F50D /* SwiftUIProjectUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIProjectUITests;
+			sourceTree = "<group>";
+		};
+		04C007D928F97F2A002C9A1A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				04C007DA28F97F2A002C9A1A /* DataFlow */,
+				04C007DE28F97F2A002C9A1A /* FileIO */,
+				04C007E028F97F2A002C9A1A /* Networking */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		04C007DA28F97F2A002C9A1A /* DataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				04C007DB28F97F2A002C9A1A /* AppState.swift */,
+				04C007DC28F97F2A002C9A1A /* AppError.swift */,
+				04C007DD28F97F2A002C9A1A /* AppAction.swift */,
+			);
+			path = DataFlow;
+			sourceTree = "<group>";
+		};
+		04C007DE28F97F2A002C9A1A /* FileIO */ = {
+			isa = PBXGroup;
+			children = (
+				04C007DF28F97F2A002C9A1A /* FileStorage.swift */,
+			);
+			path = FileIO;
+			sourceTree = "<group>";
+		};
+		04C007E028F97F2A002C9A1A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		04E350D528F83F820087CD14 /* Json */ = {
@@ -686,8 +730,12 @@
 				04E3517A28F84CCF0087CD14 /* PokemonViewModel.swift in Sources */,
 				04E3518928F84F0A0087CD14 /* PokemonRootView.swift in Sources */,
 				04E3518B28F850520087CD14 /* SettingRootView.swift in Sources */,
+				04C007E328F97F2A002C9A1A /* AppAction.swift in Sources */,
+				04C007E128F97F2A002C9A1A /* AppState.swift in Sources */,
+				04C007E428F97F2A002C9A1A /* FileStorage.swift in Sources */,
 				04E3517428F84C4A0087CD14 /* Ability.swift in Sources */,
 				04E3517228F84C260087CD14 /* Language.swift in Sources */,
+				04C007E228F97F2A002C9A1A /* AppError.swift in Sources */,
 				04E3519128F85E280087CD14 /* PokemonInfoPanelHeader.swift in Sources */,
 				04E3518D28F850640087CD14 /* SettingView.swift in Sources */,
 				04E3518F28F85CFC0087CD14 /* PokemonInfoPanel.swift in Sources */,
